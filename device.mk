@@ -518,7 +518,7 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge:64
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sensors/hals.conf:vendor/etc/sensors/hals.conf
+    $(LOCAL_PATH)/configs/sensors/hals.conf:vendor/etc/sensors/hals.conf
 
 # Default permission grant exceptions
 PRODUCT_COPY_FILES += \
