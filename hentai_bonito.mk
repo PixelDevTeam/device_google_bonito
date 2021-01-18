@@ -38,6 +38,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_product.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/handheld_vendor.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 
+# Inherit hentaiOS products
+$(call inherit-product, vendor/hentai/config/common_telephony.mk)
+
 $(call inherit-product, device/google/bonito/device-bonito.mk)
 
 PRODUCT_MANUFACTURER := Google
