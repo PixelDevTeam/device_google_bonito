@@ -431,6 +431,10 @@ PRODUCT_PACKAGES += \
     android.hardware.drm@1.3-service.widevine \
     libdrm.vendor
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    drm.service.enabled=true \
+    media.mediadrmservice.enable=true
+
 # NFC and Secure Element packages
 PRODUCT_PACKAGES += \
     NfcNci \
