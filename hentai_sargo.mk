@@ -46,4 +46,8 @@ PRODUCT_NAME := hentai_sargo
 PRODUCT_DEVICE := sargo
 PRODUCT_MODEL := Pixel 3a
 
+# Override ro.product.device for OTA zip
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.device=sargo
+
 $(call inherit-product, vendor/google/sargo/sargo-vendor.mk)

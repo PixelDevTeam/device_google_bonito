@@ -46,4 +46,8 @@ PRODUCT_NAME := hentai_bonito
 PRODUCT_DEVICE := bonito
 PRODUCT_MODEL := Pixel 3a XL
 
+# Override ro.product.device for OTA zip
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.device=bonito
+
 $(call inherit-product, vendor/google/bonito/bonito-vendor.mk)
