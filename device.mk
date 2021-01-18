@@ -411,6 +411,10 @@ PRODUCT_PACKAGES += \
     nos_app_keymaster:64 \
     nos_app_weaver:64
 
+# RRO
+PRODUCT_PACKAGES += \
+    SystemUIGoogleOverlayHentai
+
 # Bluetooth HAL
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0-impl-qti \
