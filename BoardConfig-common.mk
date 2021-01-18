@@ -61,12 +61,18 @@ BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 endif
 
+# Inline kernel building
+TARGET_KERNEL_CLANG_COMPILE := true
+TARGET_KERNEL_SOURCE := kernel/google/pendulum
+TARGET_KERNEL_CONFIG := pendulum_defconfig
+BOARD_KERNEL_IMAGE_NAME := Image.lz4-dtb
+
 BOARD_INCLUDE_DTB_IN_BOOTIMG := true
 BOARD_BOOT_HEADER_VERSION := 2
 BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 # DTBO partition definitions
-BOARD_PREBUILT_DTBOIMAGE := device/google/bonito-kernel/dtbo.img
+TARGET_NEEDS_DTBOIMAGE := true
 BOARD_DTBOIMG_PARTITION_SIZE := 8388608
 
 TARGET_NO_KERNEL := false
@@ -252,21 +258,6 @@ BOARD_VENDOR_KERNEL_MODULES += \
 else
 BOARD_VENDOR_KERNEL_MODULES += \
     $(wildcard device/google/bonito-kernel/*.ko)
-endif
-
-# DTB
-ifeq (,$(filter-out sargo_kasan bonito_kasan, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/kasan
-else ifeq (,$(filter-out sargo_kernel_debug_memory bonito_kernel_debug_memory, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_memory
-else ifeq (,$(filter-out sargo_kernel_debug_locking bonito_kernel_debug_locking, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_locking
-else ifeq (,$(filter-out sargo_kernel_debug_hang bonito_kernel_debug_hang, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_hang
-else ifeq (,$(filter-out sargo_kernel_debug_api bonito_kernel_debug_api, $(TARGET_PRODUCT)))
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel/debug_api
-else
-BOARD_PREBUILT_DTBIMAGE_DIR := device/google/bonito-kernel
 endif
 
 # Testing related defines
