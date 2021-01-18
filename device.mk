@@ -553,7 +553,7 @@ PRODUCT_PACKAGES += \
 ENABLE_VENDOR_RIL_SERVICE := true
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
+    $(LOCAL_PATH)/configs/gps/sec_config:$(TARGET_COPY_OUT_VENDOR)/etc/sec_config
 
 
 HOSTAPD := hostapd
@@ -662,11 +662,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.snd_card.open.retries=50
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf
+    $(LOCAL_PATH)/configs/gps/lowi.conf:$(TARGET_COPY_OUT_VENDOR)/etc/lowi.conf
 
 # GPS configuration file
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
+    $(LOCAL_PATH)/configs/gps/gps.conf:$(TARGET_COPY_OUT_VENDOR)/etc/gps.conf
 
 # Vendor seccomp policy files for media components:
 PRODUCT_COPY_FILES += \
