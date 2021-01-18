@@ -19,5 +19,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/hentai_sargo.mk
 
 COMMON_LUNCH_CHOICES := \
+    hentai_bonito-user \
+    hentai_sargo-user \
     hentai_bonito-userdebug \
     hentai_sargo-userdebug
