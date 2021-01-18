@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bonito.mk \
-    $(LOCAL_DIR)/aosp_sargo.mk
+    $(LOCAL_DIR)/hentai_bonito.mk \
+    $(LOCAL_DIR)/hentai_sargo.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_bonito-userdebug \
-    aosp_sargo-userdebug
+    hentai_bonito-userdebug \
+    hentai_sargo-userdebug
