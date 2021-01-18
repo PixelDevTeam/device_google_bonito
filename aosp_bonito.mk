@@ -45,9 +45,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/telephony_vendor.mk)
 $(call inherit-product, device/google/bonito/device-bonito.mk)
 $(call inherit-product-if-exists, vendor/google_devices/bonito/proprietary/device-vendor.mk)
 
-# STOPSHIP deal with Qualcomm stuff later
-# PRODUCT_RESTRICT_VENDOR_FILES := all
-
 PRODUCT_MANUFACTURER := Google
 PRODUCT_BRAND := Android
 PRODUCT_NAME := aosp_bonito
