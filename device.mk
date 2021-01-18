@@ -362,6 +362,12 @@ PRODUCT_PACKAGES += \
     vendor.display.config@1.3.vendor \
     libdisplayconfig
 
+# Graphics properties
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.gfx.angle.supported=true \
+    ro.hardware.egl=adreno \
+    ro.hardware.vulkan=adreno
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
